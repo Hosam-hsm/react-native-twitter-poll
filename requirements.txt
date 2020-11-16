@@ -1,0 +1,73 @@
+APIs
+
+1. createPoll
+    method - POST
+    args - {
+    "creator":{
+        "id": "454",
+        "name":"Hosam",
+        "image":"https://picsum.photos/30/30"
+        },
+    "question": "Choose an option.",
+    "choices": [{"id":"0","choice":"Choice 1"},{"id":"1","choice":"Choice 2"}],
+    "duration": "86400000",
+    }
+    action - create new poll with the data provided.
+
+2. getPosts
+    method - GET
+    return - The posts for home feed // can use pagination according to the use case. //     
+    POST_STRUCTURE 
+    {
+            "id": "1", // post id //
+            "creator": {
+                "id": "4646464",
+                "image": "https://picsum.photos/30/30",
+                "name": "Hosam"
+            },
+            "createdAt": "2020-11-14T05:18:21.018Z",
+            "question": "Some random question?",
+            "votes": [
+                {
+                    "user": "5445", // user id //
+                    "choice": "0"
+                },
+                {
+                    "user": "4654",
+                    "choice": "2"
+                },
+                {
+                    "user": "4654",
+                    "choice": "2"
+                },
+                {
+                    "user": "8548",
+                    "choice": "2"
+                },
+            ],
+            "duration": "864000", // milliseconds //
+            "choices": [
+                {
+                    "id": "0",
+                    "choice": "Choice 1"
+                },
+                {
+                    "id": "1",
+                    "choice": "Choice 2"
+                },
+                {
+                    "id": "2",
+                    "choice": "Choice 3"
+                },
+            ]
+    }
+
+3. vote
+    method - POST
+    args - {
+        "postId":"58445",
+        "choice":"2",
+        "user":"56756"
+     } 
+     action - Add to the votes for the post.
+     return(optional) - Can return that post data alone after voting and update that post in store with the new data (for real time results).    
