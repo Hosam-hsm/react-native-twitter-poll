@@ -106,7 +106,7 @@ export default class Store {
                 "image": "https://picsum.photos/30/30",
                 "name": "XYZ"
             },
-            "createdAt": "2020-11-14T05:18:21.018Z",
+            "createdAt": "2020-11-17T05:18:21.018Z",
             "question": "Click a choice to vote.",
             "votes": [
                 {
@@ -141,7 +141,7 @@ export default class Store {
                 "image": "https://picsum.photos/30/30",
                 "name": "RSTUV"
             },
-            "createdAt": "2020-11-14T05:18:21.018Z",
+            "createdAt": "2020-11-18T05:18:21.018Z",
             "question": "Click a choice to vote.",
             "votes": [
                 {
